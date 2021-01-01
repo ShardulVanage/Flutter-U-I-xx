@@ -5,6 +5,7 @@ import 'package:flutter_food_delivery_ui/Widgets/recent_order.dart';
 import 'package:flutter_food_delivery_ui/data/data.dart';
 import 'package:flutter_food_delivery_ui/models/restaurant.dart';
 import 'package:flutter_food_delivery_ui/screen/cart_screen.dart';
+import 'package:flutter_food_delivery_ui/screen/loginscreen.dart';
 import 'package:flutter_food_delivery_ui/screen/restaurant_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -98,7 +99,7 @@ class _HomescreenState extends State<Homescreen> {
               Icons.account_circle_outlined,
             ),
             iconSize: 30,
-            onPressed: () {}),
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_)=> LoginScreen()))),
         title: Center(
           child: Text('Food Delivery'),
         ),
