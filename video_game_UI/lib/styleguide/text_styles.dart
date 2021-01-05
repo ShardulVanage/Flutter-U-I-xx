@@ -10,11 +10,8 @@ final TextStyle labelTextStyle = TextStyle(
   fontSize: 16.0,
   color: Colors.grey,
 );
-final TextStyle whiteValueTextStyle = TextStyle(
-  fontWeight: FontWeight.bold,
-  fontSize: 18.0,
-  color: Colors.white
-);
+final TextStyle whiteValueTextStyle =
+    TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.white);
 final TextStyle whiteLabelTextStyle = TextStyle(
   fontWeight: FontWeight.normal,
   fontSize: 16.0,
@@ -26,13 +23,15 @@ final TextStyle rankStyle = TextStyle(
   color: primaryColor,
 );
 final TextStyle selectedTabStyle = TextStyle(
-  fontSize: 22.0,
-  color: Colors.black,
+  //changed
+  fontSize: 25.0,
+  color: Colors.orangeAccent,
   fontWeight: FontWeight.bold,
 );
 final TextStyle defaultTabStyle = TextStyle(
+  //changed
   fontSize: 20.0,
-  color: Colors.grey,
+  color: Colors.white,
   fontWeight: FontWeight.bold,
 );
 final TextStyle headingStyle = TextStyle(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:video_game_message_board_app/common/forumcart.dart';
 import 'package:video_game_message_board_app/common/tab_text.dart';
+import 'package:video_game_message_board_app/model/forum.dart';
 
 class HorizontalTablayout extends StatefulWidget {
   @override
@@ -20,7 +22,7 @@ class _HorizontalTablayoutState extends State<HorizontalTablayout> {
             bottom: 0,
             top: 0,
             child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 32.0),
+              padding: const EdgeInsets.symmetric(vertical: 80.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -47,6 +49,18 @@ class _HorizontalTablayoutState extends State<HorizontalTablayout> {
                   ),
                 ],
               ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 60 ,),
+            child: ListView(
+              physics: BouncingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              children: <Widget>[
+                Forumcart(forum: fortniteForum),
+                Forumcart(forum: pubgForum)
+
+              ],
             ),
           ),
         ],
