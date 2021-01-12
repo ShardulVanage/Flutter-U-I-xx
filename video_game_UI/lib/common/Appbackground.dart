@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_game_message_board_app/styleguide/colors.dart';
 // import 'package:video_game_message_board_app/styleguide/colors.dart';
 
 class AppBackground extends StatelessWidget {
@@ -11,7 +12,7 @@ class AppBackground extends StatelessWidget {
       return Stack(
         children: [
           Container(
-            color: Colors.blueGrey[300],
+            color: Color.fromRGBO(227, 229, 240, 100)
           ),
           Positioned(
             left: -(height / 2 - width / 2),
@@ -20,16 +21,9 @@ class AppBackground extends StatelessWidget {
               height: height,
               width: height,
               decoration: BoxDecoration(
-                  color: Colors.blueGrey[600], shape: BoxShape.circle,
-                  boxShadow: [
-      BoxShadow(
-        color: Colors.black.withOpacity(0.5),
-        spreadRadius: 5,
-        blurRadius: 10,
-        offset: Offset(0, 3), // changes position of shadow
-      ),
-    ],
-                  ),
+                color: firstCircleColor,
+                shape: BoxShape.circle,
+              ),
             ),
           ),
           Positioned(
@@ -38,17 +32,10 @@ class AppBackground extends StatelessWidget {
             child: Container(
               height: width * 1.6,
               width: width * 1.6,
-              decoration:
-                  BoxDecoration(color: Colors.blueGrey[100], shape: BoxShape.circle,
-                  boxShadow: [
-      BoxShadow(
-        color: Colors.black.withOpacity(0.5),
-        spreadRadius: 5,
-        blurRadius: 10,
-        offset: Offset(0, 3), // changes position of shadow
-      ),
-    ],
-                  ),
+              decoration: BoxDecoration(
+                color: secondCircleColor,
+                shape: BoxShape.circle,
+              ),
             ),
           ),
           Positioned(
@@ -57,17 +44,10 @@ class AppBackground extends StatelessWidget {
             child: Container(
               height: width * 0.6,
               width: width * 0.6,
-              decoration:
-                  BoxDecoration(color: Colors.blueGrey[50], shape: BoxShape.circle,
-                  boxShadow: [
-      BoxShadow(
-        color: Colors.black.withOpacity(0.5),
-        spreadRadius: 5,
-        blurRadius: 19,
-        offset: Offset(0, 3), // changes position of shadow
-      ),
-    ],
-                  ),
+              decoration: BoxDecoration(
+                color: thirdCircleColor,
+                shape: BoxShape.circle,
+              ),
             ),
           )
         ],

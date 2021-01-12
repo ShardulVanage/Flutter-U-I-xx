@@ -6,22 +6,20 @@ class TabText extends StatelessWidget {
   final String text;
   final Function ontabtap;
 
-  TabText({this.text, this.selectedtab,this.ontabtap});
+  TabText({this.text, this.selectedtab, this.ontabtap});
   @override
   Widget build(BuildContext context) {
     return Transform.rotate(
       angle: -1.58,
       child: InkWell(
         onTap: ontabtap,
-              child: AnimatedDefaultTextStyle(
-                style:  selectedtab ? selectedTabStyle : defaultTabStyle,
-          
-                duration: const Duration(milliseconds: 500),
-                
-                              child: Text(
-          text,
+        child: AnimatedDefaultTextStyle(
+          style: selectedtab ? selectedTabStyle : defaultTabStyle,
+          duration: const Duration(milliseconds: 500),
+          child: Text(
+            text,
+          ),
         ),
-              ),
       ),
     );
   }

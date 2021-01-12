@@ -27,7 +27,7 @@ class _HorizontalTablayoutState extends State<HorizontalTablayout> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TabText(
-                    text: 'media',
+                    text: 'Media',
                     selectedtab: selectedTabindex == 0,
                     ontabtap: () {
                       onTabTap(0);
@@ -52,14 +52,15 @@ class _HorizontalTablayoutState extends State<HorizontalTablayout> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 60 ,),
+            padding: const EdgeInsets.only(
+              left: 60,
+            ),
             child: ListView(
               physics: BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 Forumcart(forum: fortniteForum),
                 Forumcart(forum: pubgForum)
-
               ],
             ),
           ),

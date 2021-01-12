@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:video_game_message_board_app/model/forum.dart';
 
+import 'ForumNameWidget.dart';
+
 class Forumcart extends StatelessWidget {
   final Forum forum;
   Forumcart({this.forum});
@@ -24,6 +26,7 @@ child:ClipRRect(
                 forum.imagePath,
                 fit: BoxFit.fitWidth,
               ),
+              ForumNameWidget(forum: forum),
             ],
           ),
         ),

@@ -25,13 +25,13 @@ final TextStyle rankStyle = TextStyle(
 final TextStyle selectedTabStyle = TextStyle(
   //changed
   fontSize: 25.0,
-  color: Colors.orangeAccent,
+  color: Color.fromRGBO(80, 81, 89, 100),
   fontWeight: FontWeight.bold,
 );
 final TextStyle defaultTabStyle = TextStyle(
   //changed
   fontSize: 20.0,
-  color: Colors.white,
+  color: Color.fromRGBO(176, 179, 197, 100),
   fontWeight: FontWeight.bold,
 );
 final TextStyle headingStyle = TextStyle(
