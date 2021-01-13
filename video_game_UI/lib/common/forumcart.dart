@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_game_message_board_app/common/ForumdetailWidget.dart';
 
 import 'package:video_game_message_board_app/model/forum.dart';
 
@@ -26,7 +27,16 @@ child:ClipRRect(
                 forum.imagePath,
                 fit: BoxFit.fitWidth,
               ),
-              ForumNameWidget(forum: forum),
+            
+                Positioned(
+                left: 0,
+                right: 0,
+                bottom: 0,
+                child: ForumdetailWidget(forum: forum)),
+                  Positioned(
+                left: 0,
+                bottom: 80,
+                child: ForumNameWidget(forum: forum)),
             ],
           ),
         ),
