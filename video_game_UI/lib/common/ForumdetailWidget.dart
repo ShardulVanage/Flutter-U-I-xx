@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_game_message_board_app/common/Labelvaluewidget.dart';
 import 'package:video_game_message_board_app/model/forum.dart';
 import 'package:video_game_message_board_app/styleguide/text_styles.dart';
 
@@ -38,10 +39,45 @@ class ForumdetailWidget extends StatelessWidget {
                       forum.rank,
                       style: rankStyle,
                     )),
-                  )
+                  ),
+                  Text(
+                    'New',
+                    style: labelTextStyle,
+                  ),
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+
+              Labelvaluewidget(
+                value: forum.topics.toString(),
+                label: "Topic",
+                labelstyle: labelTextStyle,
+                valuestyle: valueTextStyle,
+              ),
+
+              Labelvaluewidget(
+                value: forum.threads,
+                label: "threads",
+                labelstyle: labelTextStyle,
+                valuestyle: valueTextStyle,
+              ),
+ 
+              Labelvaluewidget(
+                value: forum.subs,
+                label: "Subs",
+                labelstyle: labelTextStyle,
+                valuestyle: valueTextStyle,
+              ),
+
+
+            ],)
           ],
         ),
       ),
