@@ -8,8 +8,26 @@ class HorizontalTablayout extends StatefulWidget {
   _HorizontalTablayoutState createState() => _HorizontalTablayoutState();
 }
 
-class _HorizontalTablayoutState extends State<HorizontalTablayout> {
+class _HorizontalTablayoutState extends State<HorizontalTablayout>
+    with SingleTickerProviderStateMixin {
   int selectedTabindex = 2;
+  AnimationController _controller;
+  Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1000),
+    );
+    _animation = Tween<double>(begin: 0.0, end: 1.0).animate(_controller);
+  }
+
+  playanimation() {
+    _controller.reset();
+    _controller.forward();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,18 +73,39 @@ class _HorizontalTablayoutState extends State<HorizontalTablayout> {
             padding: const EdgeInsets.only(
               left: 60,
             ),
-            child: ListView(
-              physics: BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                Forumcart(forum: fortniteForum),
-                Forumcart(forum: pubgForum)
-              ],
-            ),
+            child: FutureBuilder(
+                future: playanimation(),
+                builder: (context, snapshot) {
+                  return FadeTransition(
+                    opacity: _animation,
+                                      child: ListView(
+                      physics: BouncingScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      children: getlist(selectedTabindex),
+                    ),
+                  );
+                }),
           ),
         ],
       ),
     );
+  }
+
+  List<Widget> getlist(index) {
+    return [
+      [
+        Forumcart(forum: fortniteForum),
+        Forumcart(forum: pubgForum),
+      ],
+      [
+        Forumcart(forum: fortniteForum),
+        Forumcart(forum: pubgForum),
+      ],
+      [
+        Forumcart(forum: fortniteForum),
+        Forumcart(forum: pubgForum),
+      ],
+    ][index];
   }
 
   onTabTap(int index) {

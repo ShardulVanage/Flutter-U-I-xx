@@ -8,7 +8,7 @@ class Labelvaluewidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-        crossAxisAlignment : CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(value, style: valuestyle),
         Text(label, style: labelstyle),

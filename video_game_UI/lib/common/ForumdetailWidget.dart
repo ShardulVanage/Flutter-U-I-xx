@@ -54,30 +54,26 @@ class ForumdetailWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-
-              Labelvaluewidget(
-                value: forum.topics.toString(),
-                label: "Topic",
-                labelstyle: labelTextStyle,
-                valuestyle: valueTextStyle,
-              ),
-
-              Labelvaluewidget(
-                value: forum.threads,
-                label: "threads",
-                labelstyle: labelTextStyle,
-                valuestyle: valueTextStyle,
-              ),
- 
-              Labelvaluewidget(
-                value: forum.subs,
-                label: "Subs",
-                labelstyle: labelTextStyle,
-                valuestyle: valueTextStyle,
-              ),
-
-
-            ],)
+                Labelvaluewidget(
+                  value: forum.topics.length.toString(),
+                  label: "Topic",
+                  labelstyle: labelTextStyle,
+                  valuestyle: valueTextStyle,
+                ),
+                Labelvaluewidget(
+                  value: forum.threads,
+                  label: "threads",
+                  labelstyle: labelTextStyle,
+                  valuestyle: valueTextStyle,
+                ),
+                Labelvaluewidget(
+                  value: forum.subs,
+                  label: "Subs",
+                  labelstyle: labelTextStyle,
+                  valuestyle: valueTextStyle,
+                ),
+              ],
+            )
           ],
         ),
       ),

@@ -27,7 +27,10 @@ final pubgForum = Forum(
     subs: "1000+",
     topics: pubgTopics);
 
+    
+
 final forums = [
   fortniteForum,
-  pubgForum
+  pubgForum,
+  
 ];
