@@ -1,4 +1,4 @@
-# video_game_messaging_app
+# video_game_info_app
 
 Video Game Messaging UI Mock from Dribble
 
